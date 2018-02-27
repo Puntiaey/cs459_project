@@ -1,0 +1,94 @@
+<html>
+<style>
+	header{	width: 100%;background-color: black; text-align: center;}
+	foot{width: 100%;background-color: black; text-align: center;color: white;}
+	main{width: 100%;height: 100%;}
+	rent{width: 50px;height: 50px;background-color: black;text-align: center;color: white;margin-left: 600px;}
+	table {width:50%; margin-right: 140px;margin-left: 350px;}
+	table, th, td {border: 1px solid black;border-collapse: collapse;}
+	th, td {padding: 5px;text-align: left;}
+	table#t01 tr:nth-child(even) {background-color: #eee;}
+	table#t01 tr:nth-child(odd) {background-color:#fff;}
+	table#t01 th {background-color: black;color: white;}
+	a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+
+<head><title>Car List</title></head>
+
+<body  background="http://quikstor.com/wp-content/uploads/2017/01/abstact_self_storage_software_background.jpg">
+<div class="container">
+	<header><h1 style="color: white;">Car_List</h1></header>
+	
+	<main><br></br>
+	<table id="t01">
+  	<tr>
+    	<th>FIRST_NAME</th> <th>LAST_NAME</th> <th>TEL.</th> <th>DOB</th><th>CREDIT</th><th>MEMO</th>
+    	
+    	<tr>   {% for p in object_list %}	
+				<td>{{p.first_name}}</td>
+				<td>{{p.last_name}}</td>
+				<td>{{p.telephone}}</td>
+				<td>{{p.dob}}</td>
+				<td>{{p.credit_amount}}</td>
+					<td>{{p.memo}}<tr>{% endfor %}</td></tr>  
+		</table>
+<br></br>
+<rent><a href="http://localhost:8000/personcreate/">Click here to create a new person.</a></rent>
+
+</main>
+<header>
+		<h1 style="color: white;">Welcom!</h1></header>
+</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+<h1>Rent_list</h1>
+
+
+   {% for r in object_list %}
+
+  <li>name: {{r.first_name}}, last: {{r.last_name}}, tel: {{r.telephone}}, dob: {{r.dob}}, credit: {{r.credit_amount}}, memo: {{memo}}</li>
+
+{% empty %}
+
+	<p> Total rents is 0 .</p>
+
+{% endfor %}
+
+{% endblock %}

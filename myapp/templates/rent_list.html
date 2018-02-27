@@ -1,0 +1,36 @@
+<html>
+
+<style>
+	header{	width: 100%;background-color: black; text-align: center;}
+	foot{	width: 100%;background-color: black; text-align: center;color: white;}
+	main{ width: 100%;height: 100%;}
+	table {width:50%; margin-right: 140px;margin-left: 350px;}
+	table, th, td {border: 1px solid black;border-collapse: collapse;}
+	th, td {padding: 5px;text-align: left;}
+	table#t01 tr:nth-child(even) {background-color: #eee;}
+	table#t01 tr:nth-child(odd) {background-color:#fff;}
+	table#t01 th {background-color: black;color: white;}
+</style>
+
+<head><title>Rent List</title></head>
+
+<body  background="http://quikstor.com/wp-content/uploads/2017/01/abstact_self_storage_software_background.jpg">
+<div class="container">
+	<header><h1 style="color: white;">Rent_List</h1></header>
+	<main>	<br></br>	
+	<table id="t01">
+  	<tr>
+    	<th>USER</th> <th>CAR</th> <th>START_DATETIME</th> <th>STOP_DATETIME</th> <th>FEE</th> 
+    	<tr>   {% for r in object_list %}
+				<td>{{r.user}}</td>
+				<td>{{r.car}}</td>
+				<td>{{r.start}}</td>
+				<td>{{r.stop}}</td>
+					<td>{{c.fee}}<tr>{% endfor %}</td>
+		</tr>  </table>
+</main>
+
+<header><h1 style="color: white;">Welcom!</h1></header>
+
+</div>
+</body></html>

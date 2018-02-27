@@ -1,0 +1,31 @@
+<html>
+<style>
+	header{	width: 100%;background-color: black; text-align: center;}
+	foot{	width: 100%;background-color: black; text-align: center;color: white;}
+	main{ width: 50%;height: 100%;text-align: center;margin-left: 350px;}
+	table {background-color: #eee;width:50%; margin-left: 170px;}
+	table, th, td {border: 1px solid black;border-collapse: collapse;}
+	th, td {padding: 5px;text-align: left;}
+	
+</style>
+<head>
+	<title>Car Form</title>
+</head>
+
+<body  background="http://quikstor.com/wp-content/uploads/2017/01/abstact_self_storage_software_background.jpg">
+<div class="container">
+	<header><h1 style="color: white;">Car_Add_Form</h1></header>
+		
+<main>	
+<br></br><br></br><br></br>
+	<table id="t01">
+   	
+    	<tr>   {% load crispy_forms_tags %}
+
+				<td>{% crispy form %}</td>
+				</tr>  
+	</table></main> 	
+	<header><h1 style="color: white;">Welcom!</h1></header>
+</div>
+</body>
+</html>
