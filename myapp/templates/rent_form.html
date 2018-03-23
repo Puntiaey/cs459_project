@@ -1,54 +1,43 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="th">
 <style>
-	body{ 
-			font-family: montserrat;
-			display: block;
-			font-size: 20px;
-			background-color: rgba(205, 220, 57, 0.1);
-		}
+	
 	header{	width: 100%;background-color: black; text-align: center;}
-	foot{	width: 100%;background-color: black; text-align: center;color: white;}
-	main{ width: 50%;height: 100%;text-align: center;margin-left: 350px;}
-	table {background-color: #eee;width:50%; margin-left: 170px;}
+	foot{width: 100%;background-color: black; text-align: center;color: white;}
+	rent{width: 50px;height: 50px;margin-left: 600px;color: black;}
+	pic{padding: 400px; text-align: center; margin: 500px;}
+	table {width:40%;padding: 100px;}
 	table, th, td {border: 1px solid black;border-collapse: collapse;}
-	th, td {padding: 5px;text-align: left;}
+	th, td {padding: 10px;text-align: center;}
 	
 </style>
 <head>
 	<title>Rent Form</title>
-</head>
-
-
-<body  background="http://quikstor.com/wp-content/uploads/2017/01/abstact_self_storage_software_background.jpg">
-
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+<body style="background-color: #EBF5FB;">
 
 <div class="container">
-	<header><h1 style="color: white;">Rent_Form</h1></header>
-		
-<main>	
+	<header><h2 style="text-align: center;color: white;">แบบฟอร์มกรอกขอเช่ารถยนต์</h2>
+  <p style="text-align: center;color: white;">กรุณากรอกข้อมูลให้ครบ</p> </header>
+ 
+  <div class="pic"><img src="http://www.myiconfinder.com/uploads/iconsets/256-256-003ea7262e1af37558f37d061e90e4a8.png" width="200" height="200" hspace="470px"></pic>   
+  <br>
+  <br>     
 
-
-
-<h2 style="color:red;font: Comic Sans MS;"> Please fill in the form.</h2>
-
-
-	<table id="t01">
-  	
-    	
-    	<tr>   {% load crispy_forms_tags %}
+  <table class="table table-bordered">
+    
+    <tbody>
+     <tr style="background-color: #F8F9F9;">   {% load crispy_forms_tags %}
 				<td>{% crispy form %}</td>
-				</tr>  
-</table></main>
-    	
-		
-
-
-
-		
-		<header>
-		<h1 style="color: white;">Welcom!</h1></header>
-
+				</tr>   
+    </tbody>
+  </table>
 </div>
-</body>
+</html>
+
+
 </html>
