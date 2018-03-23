@@ -1,59 +1,69 @@
-<html>
+<!DOCTYPE html>
+<html lang="th">
 <style>
 	header{	width: 100%;background-color: black; text-align: center;}
 	foot{width: 100%;background-color: black; text-align: center;color: white;}
-	main{width: 100%;height: 100%;}
-	rent{width: 50px;height: 50px;background-color: black;text-align: center;color: white;margin-left: 600px;}
-	table {width:50%; margin-right: 140px;margin-left: 350px;}
-	table, th, td {border: 1px solid black;border-collapse: collapse;}
-	th, td {padding: 5px;text-align: left;}
-	table#t01 tr:nth-child(even) {background-color: #eee;}
-	table#t01 tr:nth-child(odd) {background-color:#fff;}
-	table#t01 th {background-color: black;color: white;}
-a:link {
-    color: blue;
-    background-color: transparent;
+	rent{width: 50px;height: 50px;margin-left: 600px;color: black;}
+	pic{padding: 400px; text-align: center; margin: 500px;}
+  table {width:40%;padding: 100px;}
+	a:link {
+    color: black;
+    background-color: #F2F4F4;
     text-decoration: none;
 }
-a:visited {
-    color: white;
-    background-color: transparent;
+
+	a:visited {
+    color: black;
+    background-color: #F2F4F4;
     text-decoration: none;
 }
-a:hover {
+	a:hover {
     color: red;
-    background-color: transparent;
+    background-color: #F2F4F4;
     text-decoration: underline;
 }
-a:active {
-    color: yellow;
-    background-color: transparent;
+	a:active {
+    color: black;
+    background-color: #F2F4F4;
     text-decoration: underline;
 }
+
 </style>
+<head>
+  <title>Car_list</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #EBF5FB;">
 
-<head><title>Car List</title></head>
-
-<body  background="http://quikstor.com/wp-content/uploads/2017/01/abstact_self_storage_software_background.jpg">
 <div class="container">
-	<header><h1 style="color: white;">Car_List</h1></header>
-	
-	<main><br></br>
-	<table id="t01">
-  	<tr>
-    	<th>MODEL</th> <th>DETAIL</th> <th>PRICE</th> 
-    	
-    	<tr>   {% for c in object_list %}	
+	<header><h2 style="text-align: center;color: white;">รายการรถยนต์ที่มี</h2>
+  <p style="text-align: center;color: white;">แสดงรายการรถยนต์ ประกอบด้วย model, detail และ price</p> </header>
+ 
+  <div class="pic"><img src="https://image.flaticon.com/icons/svg/215/215825.svg" width="270" height="200" hspace="400px"></pic>
+  
+     
+  <br>
+  <br>       
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="text-align: center;background-color: #283747;color: white">Model</th>
+        <th style="text-align: center;background-color: #283747;color: white">Detail</th>
+        <th style="text-align: center;background-color: #283747;color: white">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >   {% for c in object_list %}	
 				<td>{{c.model}}</td>
 				<td>{{c.detail}}</td>
 					<td>{{c.price}}<tr>{% endfor %}</td></tr>  
-		</table>
-<br></br>
-<rent><a href="http://localhost:8000/rentcreate/">Click here to rent a car.</a></rent>
-
-</main>
-<header>
-		<h1 style="color: white;">Welcom!</h1></header>
+    </tbody>
+  </table>
 </div>
-	</body>
+<a href="http://localhost:8000/rentcreate/" class="btn btn-info" role="button">Click here to rent a car.</a>
+</body>
 </html>
